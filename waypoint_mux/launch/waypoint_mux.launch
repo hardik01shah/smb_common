@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="waypoint_mux" type="waypoint_mux.py" name="waypoint_mux" output="screen"/>
+</launch>
