@@ -1,0 +1,12 @@
+<launch>
+    <arg name="filename" default="map"/><!--filename.pcd-->
+    <node name="pcd_publisher" pkg="pcd_visualizer" type="pcd_publisher" output="screen">
+        <param name="pcd_file_path" value="$(find pcd_visualizer)/data/map.pcd"/>
+        <param name="map_frame" value="map"/>
+    </node>
+
+    <!-- Node to start RViz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pcd_visualizer)/rviz/view_pcd.rviz" output="screen"/>
+
+
+</launch>
